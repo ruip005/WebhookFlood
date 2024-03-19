@@ -31,7 +31,7 @@ const sendDiscordMessage = async (webhookUrl) => {
             console.warn("Rate limit atingido.");
             return;
         }
-        error.response.status === 404 ? console.error("Webhook não encontrado " + webhookUrl) : null; // 404 = Webhook não encontrado
+        error.response.status === 404 ? console.error("Webhook não encontrado " + webhookUrl) :
         console.error("FAILED! ERROR:", error.response.status); // 429 = Rate limit
     }
 };
